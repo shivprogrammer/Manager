@@ -23,12 +23,11 @@ class EmployeeForm extends Component {
             placeholder="555-555-5555"
             value={this.props.phone}
             onChangeText={value => this.props.employeeUpdate({ prop: 'phone', value })}
-
           />
         </CardSection>
+        <Text style={styles.pickerTextStyle}>Shift</Text>
 
         <CardSection>
-          <Text style={styles.pickerTextStyle}>Shift</Text>
           <Picker
             style={{ flex: 1 }}
             selectedValue={this.props.shift}
@@ -50,8 +49,9 @@ class EmployeeForm extends Component {
 
 const styles = {
   pickerTextStyle: {
+    padding: 5,
     fontSize: 18,
-    paddingLeft: 20,
+    paddingLeft: 25,
   }
 };
 
